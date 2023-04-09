@@ -1,23 +1,39 @@
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+.grid header {
+  grid-area: header;
+}
+.grid main {
+  grid-area: main;
+}
+.grid footer {
+  grid-area: footer;
+}
+
 header {
   background-color: white;
 }
-header nav {
+header .nav {
   padding: 20px;
   margin: 10px;
 }
-header nav ul {
+header .nav ul {
   list-style-type: none;
 }
-header nav ul li {
+header .nav ul li {
   padding: 10px;
 }
-header nav ul li a {
+header .nav ul li a {
   text-decoration: none;
   font-size: 20px;
   color: orange;
   transition: 1s all;
 }
-header nav ul li a:hover {
+header .nav ul li a:hover {
   background-color: black;
   border-radius: 20px;
   color: white;

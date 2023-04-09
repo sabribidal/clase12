@@ -5,11 +5,25 @@ $black: black;
 $white: white;
 $f-size-p-desktop: 20px;
 $f-size-p-mobile: 18px;
-
+$grid: grid;
+$auto: auto;
+$full-width: 100%;
+.grid{
+    display: $grid;
+    grid-template-columns: $full-width;
+    grid-template-rows: repeat(3,$auto);
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area: footer;}
+}
 // NESTING
 header{
     background-color: $white;
-    nav{
+    .nav{
         padding: 20px;
         margin: 10px;
         ul{
