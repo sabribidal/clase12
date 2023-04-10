@@ -1,0 +1,12 @@
+// condicionales
+// declaro y defino la variable vista on un valor desktop
+$vista: desktop;
+body{
+    @if $vista == desktop{
+        h1{font-size: 3rem;color: black;}
+    } @else if $vista == mobile{
+        h1{font-size: 1.5rem;color: blue;}
+    } @else{
+        h1{font-size: 2rem;color: green;}
+    }
+}

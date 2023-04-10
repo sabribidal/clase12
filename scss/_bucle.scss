@@ -1,0 +1,17 @@
+// bucle
+
+@for $margin from 1 through 5 {
+    .mt-#{$margin}{
+        margin-top: 10px *$margin;
+    }
+}
+@for $margin from 1 through 5 {
+    .mb-#{$margin}{
+        margin-bottom: 10px *$margin;
+    }
+}
+@for $padding from 1 through 5 {
+    .p-#{$padding}{
+        padding: 10px *$padding;
+    }
+}

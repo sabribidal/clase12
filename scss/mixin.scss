@@ -1,0 +1,40 @@
+// mixin sin parametro
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px){
+    footer{
+        @include flex-column-center;
+    }
+}
+@media (min-width: 1024px){
+    footer{
+        @include flex-row-center;
+    }
+}
+
+// mixin con parametros
+@mixin d-grid($cantColumnas, $ancho, $cantFilas, $alto){
+    display: grid;
+    grid-template-columns: repeat($cantColumnas, $ancho);
+    grid-template-rows: repeat($cantFilas, $alto);
+}
+
+header{
+    @include d-grid(2, 50%, 4, auto)
+}
+main{
+    @include d-grid(1, 100%, 3, auto)
+}
+footer{
+    @include d-grid(3, 1fr, 2, auto)
+}

@@ -1,0 +1,21 @@
+// each recorriendo una lista
+
+@each $color in white, black, lightblue{
+    .text-#{$color}{
+        color:#{$color};
+    }
+}
+
+// each recorriendo un mapa
+// declaro un mapa
+$mapaFuentes:(
+    principal:'tahoma',
+    secundario: 'lato',
+    terciaria: 'times new roman'
+);
+
+@each $fuente, $familiaFuente in $mapaFuentes{
+    .f-#{$fuente}{
+        font-family: $familiaFuente;
+    }
+}

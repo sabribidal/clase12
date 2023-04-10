@@ -1,0 +1,13 @@
+// mapa
+$estilos:(
+    color: #367309,
+    centro: center,
+    tFuente: 3rem,
+    padding: 10px
+);
+div{
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    font-size: map-get($estilos, tFuente);
+    padding: map-get($estilos, padding);
+}
